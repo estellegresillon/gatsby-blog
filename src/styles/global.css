@@ -4,5 +4,10 @@ body.dark {
 }
 
 a {
-  color: orange;
+  color: #ffc356;
+}
+
+blockquote {
+  color: rgba(255, 195, 86, 0.8);
+  border-left: 0.32813rem solid #ffc356;
 }

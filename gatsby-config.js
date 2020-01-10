@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Creative Developers`,
+    title: `A Creative Developer Blog`,
     author: `Estelle Gresillon`,
-    description: `A blog for aspiring creative developers.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A blog for creative developers.`,
+    siteUrl: `https://blog.estellegresillon.fr/`,
     social: {
       twitter: `kylemathews`,
     },

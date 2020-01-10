@@ -31,7 +31,7 @@ const Layout = props => {
           {title}
         </Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <h3
@@ -51,8 +51,8 @@ const Layout = props => {
           {title}
         </Link>
       </h3>
-    )
-  }
+    );
+  };
 
   return (
     <div
@@ -94,7 +94,7 @@ const Layout = props => {
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
