@@ -17,6 +17,8 @@ blockquote {
     background-color: rgb(32, 32, 32);
     color: #fff;
   }
+
+  svg { display: none; }
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,4 +26,6 @@ blockquote {
       background-color: #fff;
       color: rgb(32, 32, 32);
   }
+
+  svg { display: none; }
 }
