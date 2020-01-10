@@ -77,6 +77,7 @@ const Layout = props => {
             tabIndex={0}
             onKeyDown={toggleTheme}
             onClick={toggleTheme}
+            id="moon-icon"
             style={{ color: "#000", marginBottom: "2.625rem", cursor: "pointer" }}
           /> :
           <FaSun
@@ -84,6 +85,7 @@ const Layout = props => {
             tabIndex={0}
             onKeyDown={toggleTheme}
             onClick={toggleTheme}
+            id="sun-icon"
             style={{ color: "#fff", marginBottom: "2.625rem", cursor: "pointer" }}
           />}
       </header>
