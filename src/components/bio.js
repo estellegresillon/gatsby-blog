@@ -57,7 +57,7 @@ const Bio = () => {
         Written by <strong>{author}</strong> who lives and works in Paris
         building useful and pretty things.
         {` `}
-        <a href={"http://foodlab.space"}>
+        <a href={"foodlab.estellegresillon.fr"}>
           Her website
         </a>
       </p>
