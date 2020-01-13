@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 export const useDarkMode = () => {
   const [theme, setTheme] = useState("");
   const [componentMounted, setComponentMounted] = useState(false);
@@ -10,7 +11,7 @@ export const useDarkMode = () => {
 
   const toggleTheme = () => {
     const body = document.querySelector("body");
-    console.log(theme)
+
     if (theme === 'light') {
       setMode('dark');
       body.classList.add("dark");

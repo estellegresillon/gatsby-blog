@@ -1,3 +1,5 @@
+body { transition: 1s all ease; }
+
 body.dark {
   background-color: rgb(32, 32, 32);
   color: #fff;
@@ -10,6 +12,32 @@ a {
 blockquote {
   color: rgba(255, 195, 86, 0.8);
   border-left: 0.32813rem solid #ffc356;
+}
+
+@keyframes moonDown {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes sunRise {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+#moon-icon { 
+  animation: 1s moonDown;
+}
+
+#sun-icon { 
+  animation: 1s sunRise;
 }
 
 @media (prefers-color-scheme: dark) {

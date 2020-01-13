@@ -71,23 +71,44 @@ const Layout = props => {
           alignItems: "center"
         }}>
         {header}
-        {theme === "light" ?
-          <FaMoon
-            role="button"
-            tabIndex={0}
-            onKeyDown={toggleTheme}
-            onClick={toggleTheme}
-            id="moon-icon"
-            style={{ color: "#000", marginBottom: "2.625rem", cursor: "pointer" }}
-          /> :
-          <FaSun
-            role="button"
-            tabIndex={0}
-            onKeyDown={toggleTheme}
-            onClick={toggleTheme}
-            id="sun-icon"
-            style={{ color: "#fff", marginBottom: "2.625rem", cursor: "pointer" }}
-          />}
+        <div
+          className="icon-wrapper"
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            height: "20px",
+            width: "20px",
+            marginBottom: "2.625rem",
+            cursor: "pointer"
+          }}>
+          {theme === "light" ?
+            <FaMoon
+              role="button"
+              tabIndex={0}
+              onKeyDown={toggleTheme}
+              onClick={toggleTheme}
+              id="moon-icon"
+              style={{
+                color: "#000",
+                position: "absolute",
+                top: "0px",
+                right: "0px",
+              }}
+            /> :
+            <FaSun
+              role="button"
+              tabIndex={0}
+              onKeyDown={toggleTheme}
+              onClick={toggleTheme}
+              id="sun-icon"
+              style={{
+                color: "#fff",
+                position: "absolute",
+                top: "0px",
+                right: "0px",
+              }}
+            />}
+        </div>
       </header>
       <main>{children}</main>
       <footer>
