@@ -129,9 +129,13 @@ const WavesCanvas = () => {
     gui.add(guiSet, "reset")
     //dat.GUI.toggleHide();
 
-    window.addEventListener("resize", initialize)
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", initialize)
+    }
     return () => {
-      window.removeEventListener("resize", initialize)
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", initialize)
+      }
       gui.destroy()
     }
   }, [])
