@@ -55,7 +55,7 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong> who lives and works in Paris as a
-        freelancer.
+        front-end developer.
         {` `}
         <a href={"https://estellegresillon.fr"}>website</a>
       </p>

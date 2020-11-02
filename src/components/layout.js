@@ -1,21 +1,22 @@
-import React from "react";
-import { Link } from "gatsby";
-import { FaMoon, FaSun } from 'react-icons/fa';
+import React from "react"
+import { Link } from "gatsby"
+import { FaMoon, FaSun } from "react-icons/fa"
 
-import { rhythm, scale } from "../utils/typography";
-import { useDarkMode } from "../utils/useDarkMode";
+import { rhythm, scale } from "../utils/typography"
+import { useDarkMode } from "../utils/useDarkMode"
 
 const Layout = props => {
-  const { location, title, children } = props;
-  const [theme, toggleTheme] = useDarkMode();
-  const rootPath = `${__PATH_PREFIX__}/`;
-  let header;
+  const { location, title, children } = props
+  const [theme, toggleTheme] = useDarkMode()
+  const rootPath = `${__PATH_PREFIX__}/`
+  let header
 
   if (location.pathname === rootPath) {
     header = (
       <h1
         style={{
           ...scale(1),
+          fontFamily: `Gilroy, sans-serif`,
           marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
@@ -31,12 +32,12 @@ const Layout = props => {
           {title}
         </Link>
       </h1>
-    );
+    )
   } else {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
+          fontFamily: `Gilroy, sans-serif`,
           marginTop: 0,
         }}
       >
@@ -51,8 +52,8 @@ const Layout = props => {
           {title}
         </Link>
       </h3>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -68,8 +69,9 @@ const Layout = props => {
           display: "flex",
           margin: "2rem 0",
           justifyContent: "space-between",
-          alignItems: "center"
-        }}>
+          alignItems: "center",
+        }}
+      >
         {header}
         <div
           className="icon-wrapper"
@@ -79,9 +81,10 @@ const Layout = props => {
             height: "20px",
             width: "20px",
             marginBottom: "2.625rem",
-            cursor: "pointer"
-          }}>
-          {theme === "light" ?
+            cursor: "pointer",
+          }}
+        >
+          {theme === "light" ? (
             <FaMoon
               role="button"
               tabIndex={0}
@@ -94,7 +97,8 @@ const Layout = props => {
                 top: "0px",
                 right: "0px",
               }}
-            /> :
+            />
+          ) : (
             <FaSun
               role="button"
               tabIndex={0}
@@ -107,7 +111,8 @@ const Layout = props => {
                 top: "0px",
                 right: "0px",
               }}
-            />}
+            />
+          )}
         </div>
       </header>
       <main>{children}</main>
@@ -117,7 +122,7 @@ const Layout = props => {
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
