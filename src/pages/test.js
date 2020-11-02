@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 // import Layout from "components/layout"
 import SEO from "components/seo"
-import WavesCanvas from "components/WavesCanvas"
+import StripeMenu from "components/StripeMenu"
 
 const Test = () => {
   // const siteTitle = data.site.siteMetadata.title
@@ -11,7 +11,7 @@ const Test = () => {
     // <Layout location={location} title={siteTitle}>
     <>
       <SEO title="All posts" />
-      <WavesCanvas />
+      <StripeMenu />
     </>
     // </Layout>
   )

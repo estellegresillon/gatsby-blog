@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react"
+import { Link } from "gatsby"
 
-import "./StripeMenu.scss";
-import MenuItem from "./MenuItem";
-import { MENU_ITEMS } from "./utils";
+import "./StripeMenu.scss"
+import MenuItem from "./MenuItem"
+import { MENU_ITEMS } from "./utils"
+import buildings from "./smallbuildings-small.jpg"
+import tower from "./smalltower-small.jpg"
 
 const StripeMenu = () => {
-  const backgroundRef = useRef(null);
-  const navRef = useRef(null);
+  const backgroundRef = useRef(null)
+  const navRef = useRef(null)
 
   return (
     <div id="Stripe-Menu">
@@ -17,7 +19,7 @@ const StripeMenu = () => {
         </div>
 
         <ul className="menu-item">
-          {MENU_ITEMS.map((item) => (
+          {MENU_ITEMS.map(item => (
             <MenuItem
               key={item.name}
               item={item}
@@ -30,7 +32,7 @@ const StripeMenu = () => {
       <div className="left-column">
         <h1>Responsive menu</h1>
         <h2>Made with ReactJs and inspired by Stripe</h2>
-        <Link className="go-back-button" to="/">
+        <Link className="go-back-button" to="/new-beginnings">
           GO BACK
         </Link>
       </div>
@@ -38,14 +40,10 @@ const StripeMenu = () => {
         <i className="fas fa-arrow-circle-up" />
         <h3>Hover the three menu items to try it out.</h3>
       </div>
-      <img
-        className="buildings"
-        src="/smallbuildings-small.jpg"
-        alt="buildings"
-      />
-      <img className="tower" src="/smalltower-small.jpg" alt="small tower" />
+      <img className="buildings" src={buildings} alt="buildings" />
+      <img className="tower" src={tower} alt="small tower" />
     </div>
-  );
-};
+  )
+}
 
-export default StripeMenu;
+export default StripeMenu

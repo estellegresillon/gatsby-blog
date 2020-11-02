@@ -33,6 +33,7 @@ const Bio = () => {
   `)
 
   const { author } = data.site.siteMetadata
+  console.log(data.avatar.childImageSharp.fixed)
   return (
     <div
       style={{
